@@ -1,0 +1,41 @@
+.student-container {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 24px;
+  padding-right: 24px;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.transaction-text {
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+  width: 60px;
+  font-size: 12px;
+}
+.delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: red;
+  cursor: pointer;
+}
+.edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: blue;
+}
+.edit-icon {
+  width: 27px;
+}
+
+.delete-icon {
+  width: 22px;
+}
