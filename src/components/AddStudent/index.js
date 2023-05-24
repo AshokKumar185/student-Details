@@ -34,7 +34,7 @@ const AddStudent = props => {
     <>
       {' '}
       <li className="student-container">
-        <p className="transaction-text">{id}</p>
+        <p className="id">{id}</p>
         <p className="transaction-text">{name}</p>
         <p className="transaction-text">{lastname}</p>
         <p className="transaction-text">{location}</p>

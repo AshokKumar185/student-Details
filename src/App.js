@@ -46,7 +46,6 @@ class App extends Component {
     educations: '',
     locations: '',
     ids: studentDetailsList.length + 1,
-    isId: 0,
   }
 
   getFirstName = event => {
@@ -244,12 +243,26 @@ class App extends Component {
     this.setState(prevState => ({isDelete: !prevState.isDelete}))
   }
 
-  clickToEditStudent = () => {
+  clickToEditStudent = id => {
     const {firstnames} = this.state
-    this.setState(prevState => ({
-      isUpdate: !prevState.isUpdate,
-      inUpdateBtn: !prevState.inUpdateBtn,
-    }))
+    const editStudent = studentDetailsList.filter(
+      eachStudent => eachStudent.id === id,
+    )
+
+    console.log(editStudent)
+
+    editStudent.map(each =>
+      this.setState(prevState => ({
+        isUpdate: !prevState.isUpdate,
+        inUpdateBtn: !prevState.inUpdateBtn,
+        firstnames: each.name,
+        lastnames: each.lastname,
+        locations: each.location,
+        educations: each.education,
+        emails: each.email,
+        dobs: each.DOB,
+      })),
+    )
   }
 
   searchStudent = event => {

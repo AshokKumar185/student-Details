@@ -1,11 +1,13 @@
 .student-container {
   display: flex;
   justify-content: space-between;
-  padding-left: 24px;
-  padding-right: 24px;
   align-items: center;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  height: 48px;
+  list-style-type: none;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .transaction-text {
   text-align: left;
@@ -13,6 +15,15 @@
   margin: 0px;
   width: 60px;
   font-size: 12px;
+  align-self: center;
+}
+.id {
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+  width: 60px;
+  font-size: 12px;
+  align-self: center;
 }
 .delete {
   display: flex;

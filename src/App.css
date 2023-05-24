@@ -8,7 +8,7 @@
   align-items: center;
 }
 .card-container {
-  width: 870px;
+  width: 970px;
 }
 .input {
   border: none;
@@ -65,12 +65,12 @@
 }
 .details-head {
   display: flex;
-  justify-content: space-between;
-  padding-left: 24px;
-  padding-right: 24px;
+  justify-content: space-around;
   align-items: center;
-  font-weight: bold;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  height: 48px;
+  list-style-type: none;
+  padding-left: 5px;
+  padding-right: 10px;
 }
 .table-header-cell {
   font-size: 12px;
