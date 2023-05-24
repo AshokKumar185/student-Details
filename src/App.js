@@ -232,52 +232,16 @@ class App extends Component {
     this.setState(prevState => ({
       isDelete: !prevState.isDelete,
     }))
-    this.setState({isId: id})
-  }
-
-  clickToCancel = () => {
-    this.setState(prevState => ({isDelete: !prevState.isDelete}))
-  }
-
-  deleteItem = () => {
-    const {isId} = this.state
     const filterStudent = studentDetailsList.findIndex(
-      eachStudent => eachStudent.id === isId,
+      eachStudent => eachStudent.id === id,
     )
     if (filterStudent !== -1) {
       studentDetailsList.splice(filterStudent, 1)
     }
-    this.setState(prevState => ({isDelete: !prevState.isDelete}))
   }
 
-  deleteStudent = () => {
-    const {isDelete, isId} = this.state
-    return (
-      <div className="delete-container">
-        <img
-          src="https://icons.veryicon.com/png/o/transport/shopping-mall/delete-127.png"
-          alt="delete"
-          className="delete-top"
-        />
-        <h2 className="delete-head">Are you sure you want to Delete</h2>
-        <div>
-          <button
-            type="button"
-            className="cancel-btn cancel"
-            onClick={this.clickToCancel}
-          >
-            Cancel
-          </button>
-          <button
-            type="button"
-            className="yes-btn yes"
-            onClick={this.deleteItem}
-          >
-            Yes
-          </button>
-        </div>
-      </div>
-    )
+  clickToCancel = () => {
+    this.setState(prevState => ({isDelete: !prevState.isDelete}))
   }
 
   clickToEditStudent = () => {
@@ -350,11 +314,10 @@ class App extends Component {
   }
 
   render() {
-    const {isUpdate, isDelete, message} = this.state
+    const {isUpdate, message} = this.state
 
     return (
       <div className="bg-container">
-        {isDelete ? this.deleteStudent() : ''}
         {isUpdate ? this.getStudentDetails() : this.createNewStudent()}
         <p>{message}</p>
       </div>

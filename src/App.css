@@ -61,6 +61,7 @@
   border-radius: 6px;
   border-bottom: 0px;
   padding-left: 0px;
+  width: 100%;
 }
 .details-head {
   display: flex;
@@ -131,13 +132,20 @@ input {
   font-family: 'Roboto';
   font-size: 25px;
 }
-
+.delete-main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .delete-container {
   box-shadow: 0 5px 10px #333;
   width: 250px;
   border: 1px solid black;
   border-radius: 7px;
   display: flex;
+  background-color: white;
   flex-direction: column;
   justify-content: center;
   align-items: center;

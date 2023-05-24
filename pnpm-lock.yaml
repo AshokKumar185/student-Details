@@ -15,6 +15,7 @@ specifiers:
   react: 17.0.1
   react-dom: 17.0.1
   react-scripts: 4.0.3
+  reactjs-popup: 2.0.5
   uuid: 9.0.0
 
 dependencies:
@@ -24,6 +25,7 @@ dependencies:
   chalk: 4.1.0
   react: 17.0.1
   react-dom: 17.0.1_react@17.0.1
+  reactjs-popup: 2.0.5_react-dom@17.0.1+react@17.0.1
   uuid: 9.0.0
 
 devDependencies:
@@ -5621,7 +5623,7 @@ packages:
     resolution: {integrity: sha512-oWb1Z6mkHIskLzEJ/XWX0srkpkTQ7vaopMQkyaEIoq0fmtFVxOthb8cCxeT+p3ynTdkk/RZwbgG4brR5BeWECw==}
     engines: {node: '>= 4.0'}
     os: [darwin]
-    deprecated: fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2.
+    deprecated: The v1 package contains DANGEROUS / INSECURE binaries. Upgrade to safe fsevents v2
     requiresBuild: true
     dependencies:
       bindings: 1.5.0
@@ -9670,6 +9672,17 @@ packages:
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
+    dev: false
+
+  /reactjs-popup/2.0.5_react-dom@17.0.1+react@17.0.1:
+    resolution: {integrity: sha512-b5hv9a6aGsHEHXFAgPO5s1Jw1eSkopueyUVxQewGdLgqk2eW0IVXZrPRpHR629YcgIpC2oxtX8OOZ8a7bQJbxA==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: '>=16'
+      react-dom: '>=16'
+    dependencies:
+      react: 17.0.1
+      react-dom: 17.0.1_react@17.0.1
     dev: false
 
   /read-pkg-up/3.0.0:
